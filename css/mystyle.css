@@ -1,0 +1,42 @@
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 1.7em;
+}
+h1,
+h2 {
+  color: red;
+}
+P {
+  color: navy;
+  font-size: 24px;
+  text-align: justify;
+}
+
+/* id selector */
+/* class selector */
+
+.para_one {
+  color: orange;
+  font-size: 24px;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.para_two {
+  color: brown;
+  font-size: 20px;
+  text-align: justify;
+  text-decoration: underline;
+}
+
+#para_three {
+  color: goldenrod;
+  font-size: 4px;
+}
+
+.class_one {
+  color: navy;
+}
+.class_two {
+  font-family: cursive;
+}
