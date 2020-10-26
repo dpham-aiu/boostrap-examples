@@ -43,7 +43,7 @@ function validateForm() {
   if (mobile == "") {
     printError("mobileErr", "Please enter your phone number.");
   } else {
-    var regex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+    var regex = /^[0-9]{10}$/;
     if (regex.test(mobile) === false) {
       printError("mobileErr", "Please enter a valid phone number.");
     } else {
