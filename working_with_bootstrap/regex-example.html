@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var name = "Mr. King";
+      //literal syntax
+      var regex1 = /^Mr\./;
+      if (regex1.test(name)) {
+        document.write("Good");
+      } else {
+        document.write("Bad");
+      }
+      //constructor syntax
+      var regex2 = new RegExp("^Mr\\.");
+      if (regex2.test(name)) {
+        document.write("Very good");
+      } else {
+        document.write("Very bad");
+      }
+
+      //activity
+      var regex = /ca[kf]e/g;
+      var str = "He was eating cake in the cafe";
+      if (regex.test(str)) {
+        document.write("Awesome..!!");
+      } else {
+        document.write("Exceptional..!!");
+      }
+
+      var matches = str.match(regex);
+      document.write(
+        `Found ${matches.length} and matches elements are : ${matches}`
+      );
+
+      var regex3 = /\s/g;
+      var str = "TIT FOR TAT\nDo\tGood";
+      document.write("<pre>" + str + "</pre>");
+
+      var regex4 = /[\s,]+/;
+      var str2 = "My favourtite colors are red, green, and blue..";
+      var parts = str2.split(regex4);
+      document.write(parts);
+
+      var regex5 = /^J/;
+      var names = ["John Smith", "James Bond", "Clark Kent"];
+      for (var name of names) {
+        if (regex.test(name)) {
+          document.write(name);
+        } else {
+          document.write(name + "No regex");
+        }
+      }
+
+      var str3 = "Color red is more visible than color blue in daylight.";
+      var regex1 = /color/g;
+      var regex2 = /color/gi;
+
+      var met = str3.match(regex1);
+      var met2 = str3.match(regex2);
+      document.write("<br />");
+      document.writeln(`Found ${met.length} and matches elements are : ${met}`);
+      document.write("<br />");
+      document.writeln(
+        `Found ${met2.length} and matches elements are : ${met2}`
+      );
+
+      var r = /fox|dog|cat/;
+      var s = "The quick brown fox jumps over the lazy dog.";
+      var mi = s.match(r);
+      document.write("<br />");
+      document.write(`Found ${mi.length} with items: ${mi}`);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      if (sessionStorage) {
+        $(document).ready(function () {
+          $(".save").click(function () {
+            var fName = $("#firstName").val();
+            sessionStorage.setItem("first_name", fName);
+            alert("You name is stored in sessionStorage.");
+          });
+          $(".access").click(function () {
+            alert("Hi " + sessionStorage.getItem("first_name"));
+          });
+        });
+        alert("sessionStorage is not empty");
+      } else {
+        alert("sessionStorage is empty.");
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="firstName" />
+      <button type="button" class="save">
+        Store Name (sessionStorage Storage)
+      </button>
+      <button type="button" class="access">
+        Get Name (sessionStorage Storage)
+      </button>
+      <button type="button" class="remove">
+        Clear name from session storage.
+      </button>
+    </form>
+  </body>
+</html>

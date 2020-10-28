@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      if (localStorage) {
+        $(document).ready(function () {
+          $(".save").click(function () {
+            var fName = $("#firstName").val();
+            localStorage.setItem("first_name", fName);
+            alert("You name is stored in local storage.");
+          });
+          $(".access").click(function () {
+            alert("Hi " + localStorage.getItem("first_name"));
+          });
+          $(".remove").click(function () {
+            localStorage.removeItem("first_name");
+            //localStorage.clear() clears all items
+          });
+        });
+        alert("localStorage is not empty");
+      } else {
+        alert("localStorage is empty.");
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="firstName" />
+      <button type="button" class="save">Store Name (Local Storage)</button>
+      <button type="button" class="access">Get Name (Local Storage)</button>
+      <button type="button" class="remove">
+        Clear name from Local storage.
+      </button>
+    </form>
+  </body>
+</html>

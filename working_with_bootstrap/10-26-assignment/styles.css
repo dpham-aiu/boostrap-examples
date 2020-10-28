@@ -1,0 +1,27 @@
+.navbar {
+  background-color: #ccffe6;
+}
+
+.navbar a {
+  color: black;
+}
+
+.bg-lt-gray {
+  background-color: lightgray;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+.bg-teal {
+  background-color: #ccffe6;
+}
+
+.col-4 {
+  padding: 30px;
+}
+
+.col-4.brdr {
+  border-style: solid;
+}
